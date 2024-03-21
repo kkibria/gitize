@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "gitize"
+version = "0.1.0"
+description = ""
+authors = ["Khan Kibria <khan.kibria@gmail.com>"]
+readme = "README.md"
+packages = [{include = "gitize", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+prj-gen = {git = "https://github.com/kkibria/prj-gen.git"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+gitize = "gitize.cli:main"

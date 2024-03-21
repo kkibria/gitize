@@ -1,0 +1,9 @@
+[config]
+abc = {prompt="abc", default="default_abc"}
+dir = {default="not prompted"}
+err = {default="not"}
+def = {prompt="def", choices = ["whatever", "whenever"], default = 1}
+wantit = {prompt="{{ abc }}", yesno=false, default=true}
+licfile = {prompt="Want LICENSE.txt?", default=false}
+lic = {prompt="license", choices={"bb"= "bb license", "cd"= "done with license"}, default= "cd"}
+txt = {default="{{ lic.val }}"}
