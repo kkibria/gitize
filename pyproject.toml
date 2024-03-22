@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "gitize"
 version = "0.1.0"
-description = ""
+description = "Creates a git initialized poetry project"
 authors = ["Khan Kibria <khan.kibria@gmail.com>"]
 readme = "README.md"
 packages = [{include = "gitize", from = "src"}]
@@ -9,6 +9,7 @@ packages = [{include = "gitize", from = "src"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 prj-gen = {git = "https://github.com/kkibria/prj-gen.git"}
+requests-cache = "^1.2.0"
 
 [build-system]
 requires = ["poetry-core"]
