@@ -11,7 +11,7 @@ serves as an example to show how to use `prj-gen`.
 ## Install
 `gitize` requires `poetry` and `git` installed in your system and added to
 `path` already. Recommended way is to install `gitize` globally and you will
-have install in administrative mode.
+have to install in administrative mode.
 
 ### Using poetry
 ```
@@ -27,7 +27,7 @@ Without the administrative privilege, you can install it in a virtual
 environment as well.
 
 ## Running
-It can also be executed directly from command line,
+It can be executed directly from command line,
 ```
 gitize <path>
 ```
