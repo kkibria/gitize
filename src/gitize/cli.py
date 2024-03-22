@@ -14,14 +14,10 @@ def build(dstpath):
 def main():
     parser = argparse.ArgumentParser(
         prog='gitize',
-        description='What the program does',
-        epilog='Text at the bottom of help')
+        description='creates a git initialized poetry project',
+        epilog='python -m gitize')
 
-    parser.add_argument('path')           # positional argument
-    # parser.add_argument('-c', '--count')      # option that takes a value
-    # parser.add_argument('-v', '--verbose',
-    #     action='store_true')  # on/off flag
+    parser.add_argument('path')
     
     args = parser.parse_args()
-    # print(args.filename, args.count, args.verbose)
     build(args.path)
