@@ -1,14 +1,14 @@
 from pathlib import Path
+from warnings import warn
 from .hook import MyGen
 import argparse
 
 def build(dstpath):
     dst = Path(dstpath)
     if dst.exists():
-        print(f'Note: {dstpath} already exists, exiting!')
+        warn(f'{dstpath} already exists, exiting!')
         return
     g = MyGen("template")
-    g.update_params({"path": dstpath})
     g.run(dst)
 
 def main():
@@ -20,4 +20,10 @@ def main():
     parser.add_argument('path')
     
     args = parser.parse_args()
-    build(args.path)
+    try:
+        build(args.path)
+    except Exception as e:
+        print(f'{e.__class__.__name__}:', *e.args)
+        return 1
+    
+    return 0 

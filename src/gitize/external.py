@@ -2,27 +2,25 @@ import json
 from pathlib import Path
 import subprocess
 from urllib.request import urlopen
-from prj_gen.userinput import get_choices_from_dict
+from prj_gen.userinput import get_choices_from_list
 from requests_cache import CachedSession
+
+KEY = "key"
 
 # Grab license from github
 def get_license(path): 
-    KEY = "key"
     session = CachedSession()
     response = session.get('https://api.github.com/licenses')
     lics = response.json()
     if len(lics) < 1:
         return
-    n = 1
-    ch = {}
-    urls = {}  
+    names = []
+    urls = []  
     for i in lics:
-        key = f'{n}'
-        n += 1
-        ch[key] = i["name"]
-        urls[key] = i["url"]
-    r = get_choices_from_dict(key="License", ch=ch, df="1", pr="License")
-    with urlopen(urls[r[KEY]]) as url:
+        names.append(i["name"])
+        urls.append(i["url"])
+    i_lic = get_choices_from_list(key="License", ch=names, df=0, pr="License")
+    with urlopen(urls[i_lic[KEY]]) as url:
         lic = json.load(url)
     dst = Path(path).joinpath("LICENSE.txt")
     with dst.open("w") as f:

@@ -298,7 +298,7 @@ toml = "^0.10.2"
 type = "git"
 url = "https://github.com/kkibria/prj-gen.git"
 reference = "HEAD"
-resolved_reference = "0c9ead1831eee9d11155230bdcb41e21a36ab88e"
+resolved_reference = "b677eb8af7646dc7122b3b3d253708bcadffc92c"
 
 [[package]]
 name = "prompt-toolkit"
