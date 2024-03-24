@@ -9,7 +9,6 @@ packages = [{include = "gitize", from = "src"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 prj-gen = {git = "https://github.com/kkibria/prj-gen.git"}
-requests-cache = "^1.2.0"
 
 [build-system]
 requires = ["poetry-core"]

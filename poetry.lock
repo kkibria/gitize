@@ -292,13 +292,14 @@ develop = false
 [package.dependencies]
 jinja2 = "^3.1.3"
 prompt-toolkit = "^3.0.43"
+requests-cache = "^1.2.0"
 toml = "^0.10.2"
 
 [package.source]
 type = "git"
 url = "https://github.com/kkibria/prj-gen.git"
 reference = "HEAD"
-resolved_reference = "b677eb8af7646dc7122b3b3d253708bcadffc92c"
+resolved_reference = "e4c6f7c7b8224a5c039219ebdb2f733b13a6f9fe"
 
 [[package]]
 name = "prompt-toolkit"
@@ -443,4 +444,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "553fa42f63a32bbe0a70496ba776b2b851c426f0fb9d74391ba99aa0a4f8f049"
+content-hash = "42a37425b07c1abfdf0f88bc7b8ca30f65df75a9b9ac3ceab11e79d2a69a4bfe"
