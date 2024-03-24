@@ -1,5 +1,6 @@
 from pathlib import Path
 from warnings import warn
+from . import get_template_path
 from .hook import MyGen
 import argparse
 
@@ -8,7 +9,7 @@ def build(dstpath, params):
     if dst.exists():
         warn(f'{dstpath} already exists, exiting!')
         return
-    g = MyGen("template")
+    g = MyGen(get_template_path())
     g.update_params(params)
     g.run(dst)
 

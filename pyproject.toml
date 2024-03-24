@@ -4,12 +4,7 @@ version = "0.1.0"
 description = "Creates a git initialized poetry project"
 authors = ["Khan Kibria <khan.kibria@gmail.com>"]
 readme = "README.md"
-packages = [
-    {include = "gitize", from = "src"},
-]
-include = [
-    { path = "gitize_template", format = ["sdist", "wheel"] }
-]
+packages = [{include = "gitize", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
