@@ -1,8 +1,4 @@
 import subprocess
-from prj_gen.common import get_license
-
-def write_license(path):
-    get_license(path, 'gitize')
 
 def cmds(path):
     return {
