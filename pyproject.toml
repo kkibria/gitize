@@ -2,7 +2,7 @@
 name = "gitize"
 version = "0.1.0"
 description = "Creates a git initialized poetry project"
-authors = ["Khan Kibria <khan.kibria@gmail.com>"]
+authors = ["Khan Kibria khan.kibria@gmail.com"]
 readme = "README.md"
 packages = [{include = "gitize", from = "src"}]
 

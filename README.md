@@ -1,5 +1,7 @@
 # Gitize
 
+`gitize` creates a git initialized poetry project.
+
 It is a python CLI tool that does the followings,
 - Creates a poetry project.
 - Runs git init.
