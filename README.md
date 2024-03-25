@@ -7,8 +7,8 @@ It is a python CLI tool that does the followings,
 - Runs git init.
 - Creates a license file.
 
-This tool uses [`prj-gen`](https://github.com/kkibria/prj-gen) library and
-serves as an example to show how to use `prj-gen`.
+This tool is built with [`chef`](https://github.com/kkibria/chef) which uses
+[`prj-gen`](https://github.com/kkibria/prj-gen) library to perform generation.
 
 ## Install
 `gitize` requires `poetry` and `git` installed in your system and added to

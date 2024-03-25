@@ -1,8 +1,10 @@
+import argparse
 from pathlib import Path
 from warnings import warn
+
 from . import get_template_path, set_warnigs_hook
 from .hook import MyGen
-import argparse
+
 
 def build(dstpath, params):
     dst = Path(dstpath)
@@ -12,6 +14,7 @@ def build(dstpath, params):
             return
     g = MyGen(get_template_path())
     g.update_params(params)
+    g.exclude_add('__pycache__'.split())
     g.run(dst)
 
 def main():
@@ -35,5 +38,8 @@ def main():
     except Exception as e:
         print(f'{e.__class__.__name__}:', *e.args)
         return 1
+
+    print(f'"{args.path}" has been created. Run "poetry install" from')
+    print(f'inside "{args.path}" to get all the dependencies installed.')
     
     return 0
