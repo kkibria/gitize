@@ -1,6 +1,6 @@
 from pathlib import Path
 from warnings import warn
-from . import get_template_path
+from . import get_template_path, set_warnigs_hook
 from .hook import MyGen
 import argparse
 
@@ -8,7 +8,7 @@ def build(dstpath, params):
     dst = Path(dstpath)
     if not params["force"]:
         if dst.exists():
-            warn(f'{dstpath} already exists, exiting!')
+            warn(f'"{dstpath}" already exists, use --force, exiting!')
             return
     g = MyGen(get_template_path())
     g.update_params(params)
@@ -28,6 +28,8 @@ def main():
     
     args = parser.parse_args()
     params["force"] = args.force
+
+    set_warnigs_hook()
     try:
         build(args.path, params)
     except Exception as e:
