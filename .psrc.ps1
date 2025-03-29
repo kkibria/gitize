@@ -1,1 +1,1 @@
-.\.venv\Scripts\Activate.ps1
+poetry env activate
