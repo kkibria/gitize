@@ -2,7 +2,7 @@ import subprocess
 
 def cmds(path):
     return {
-        "poetry" : f'poetry new {path}'.split(),
+        "poetry" : f'poetry new "{path}"'.split(),
         "git" : f'git init {path}'.split(),
         "user": f'git config user.name'.split(),
         "email": f'git config user.email'.split(),
