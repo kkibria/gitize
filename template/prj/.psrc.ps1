@@ -1,1 +1,1 @@
-poetry env activate
+Invoke-Expression (poetry env activate)
